@@ -1,75 +1,196 @@
 ---
-title: 'Nehalem Bay Salmon Fishing | Hammerhead Fishing Guide'
-description: 'Dive into the exhilarating world of Salmon fishing in Nehalem Bay with Hammerhead Guide Service. Experience tailored trips during Summer and Fall, promising both adventure and a bountiful catch.'
-preloadImg: ''
-permalink: 'salmon/' 
+title: "Nehalem Bay Salmon Fishing | Hammerhead Fishing Guide"
+description: "Dive into the exhilarating world of Salmon fishing in Nehalem Bay with Hammerhead Guide Service. Experience tailored trips during Summer and Fall, promising both adventure and a bountiful catch."
+preloadImg: ""
+permalink: "salmon/"
 eleventyNavigation:
-    key: Salmon
-    parent: Services
-    order: 400
+  key: Salmon
+  parent: Services
+  order: 400
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/salmon.css" />
+<link rel="stylesheet" href="/css/services.css" />
+{% endblock %} {% block body %}
 
-{% block head %}
-    <link rel="stylesheet" href="/css/salmon.css">
-    <link rel="stylesheet" href="/css/services.css">
-{% endblock %}
+<!-- ============================================ -->
+<!--                salmon-hero                     -->
+<!-- ============================================ -->
+<section id="salmon-hero" class="services-hero">
+  <div class="Section_top">
+    <picture>
+      <source srcset="/assets/images/salmon-hero.webp" type="image/webp" />
+      <img
+        src="/assets/images/salmon-hero.jpg"
+        alt="Nehalem Bay Salmon Fishing"
+        class="hero-image"
+      />
+    </picture>
+    <div class="tint"></div>
+    <div class="content">
+      <h1 class="cs-hero-title">
+        Nehalem Bay<br /><span class="second-line">Salmon Fishing</span>
+      </h1>
+      <p class="cs-text">
+        Dive into the vibrant world of Salmon fishing in Nehalem Bay, where
+        seasoned anglers and beginners alike come together for an unforgettable
+        experience with Hammerhead Guide Service.
+      </p>
+      <div class="two-buttons">
+        <a href="/contact/" class="button-solid">Contact Us</a>
+        <a href="#price-section" class="button-solid price-btn">Pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% block body %}
+<!-- ============================================ -->
+<!--                 overview                    -->
+<!-- ============================================ -->
+<section id="overview" class="cs-section">
+  <div class="cs-container">
+    <div class="image-group">
+      <picture class="cs-picture cs-picture1">
+        <img
+          decoding="async"
+          loading="lazy"
+          src="/assets/images/service-salmon.png"
+          alt=""
+        />
+      </picture>
+    </div>
+    <div class="text-content">
+      <span class="topper">Overview</span>
+      <h2 class="cs-title">
+        Salmon <br />
+        Guide <span class="text-highlight">Service</span>
+      </h2>
+      <div class="overview-content">
+          <p class="cs-text">
+            Welcome to Salmon Fishing Guide, your ultimate gateway to an
+            exhilarating world of angling excitement. Embark on a journey where the
+            shimmering waters of pristine rivers and the challenge of the wild
+            collide, offering you the chance to reel in the ultimate catch – the
+            majestic salmon.
+          </p>
+          <ul>
+            <li class="cs-text">
+              Join our seasoned guides who are not only passionate about salmon
+              fishing
+            </li>
+            <li class="cs-text">
+              Immerse yourself in the tranquility of unspoiled rivers and
+              breathtaking landscapes
+            </li>
+            <li class="cs-text">
+              Whether you're a novice or a seasoned angler, our guides tailor each
+              expedition to match your skill level
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                salmon-hero                     -->
-    <!-- ============================================ -->
-    <section id="salmon-hero" class="services-hero">
-        <div class="Section_top">
-            <picture>
-                <source srcset="/assets/images/salmon-hero.webp" type="image/webp">
-                <img src="/assets/images/salmon-hero.jpg" alt="Nehalem Bay Salmon Fishing" class="hero-image">
-            </picture>
-            <div class="tint"></div>
-            <div class="content">
-                <h1 class="cs-hero-title">
-                    Nehalem Bay<br><span class="second-line">Salmon Fishing</span>
-                </h1>
-                <p class="cs-text">Dive into the vibrant world of Salmon fishing in Nehalem Bay, where seasoned anglers and beginners alike come together for an unforgettable experience with Hammerhead Guide Service.</p>
-                <div class="two-buttons">
-                    <a href="/contact/" class="button-solid">Contact Us</a>
-                    <a href="#price-section" class="button-solid price-btn">Pricing</a>
-                </div>
-            </div>
-        </div> 
-    </section>
+<section id="our-services">
+  <div class="our-services-content">
+    <h2 class="cs-title">Book our services</h2>
+    <p class="cs-text">
+      Maecenas ornare neque lacinia facilisis accumsan. Quisque auctor ut tortor
+      semper tempor.
+    </p>
+    <div class="our-services-btn">
+      <a href="/" class="button-solid">Learn More</a>
+    </div>
+  </div>
+  <img
+    decoding="async"
+    loading="lazy"
+    src="/assets/images/salmon-services.png"
+    alt=""
+  />
+</section>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            // Get the button with the class "price-btn"
-            const button = document.querySelector('.price-btn');
+<section id="pricing" class="cs-section">
+  <h2 class="cs-title">
+    Pricing & <span class="text-highlight">Packages</span>
+  </h2>
 
-            if (button) {
-                // Add a click event listener to the button
-                button.addEventListener('click', (event) => {
-                    event.preventDefault(); // Prevent the default button behavior
-                    const targetId = button.getAttribute('href'); // Get the target section id
+  <div class="pricing-items-outer">
+    <div class="pricing-items">
 
-                    // Get the target section element
-                    const targetElement = document.querySelector(targetId);
 
-                    if (targetElement) {
-                        // Calculate the offset by subtracting the desired offset value (in pixels)
-                        // from the element's offsetTop
-                        const offset = targetElement.offsetTop - 50; // Replace 'yourOffsetValue' with the desired offset value
+      <div class="pricing-item">
+        <p class="cs-text">Full Day</p>
+        <div class="pricing-item-stats">
+          <h3 class="cs-title">
+            <span class="text-highlight">$300</span>
+        </h3>
+        <span class="cs-text">20% Discount</span>
+        </div>
+        <p class="cs-text">
+          Praesent sit amet sagittis tellus, ac aliquam lacus.
+        </p>
+      </div>
+      <div class="pricing-item">
+        <p class="cs-text">Full Day</p>
+        <div class="pricing-item-stats">
+          <h3 class="cs-title">
+            <span class="text-highlight">$300</span>
+        </h3>
+        <span class="cs-text">20% Discount</span>
+        </div>
+        <p class="cs-text">
+          Praesent sit amet sagittis tellus, ac aliquam lacus.
+        </p>
+      </div>
+      <div class="pricing-item">
+        <p class="cs-text">Full Day</p>
+        <div class="pricing-item-stats">
+          <h3 class="cs-title">
+            <span class="text-highlight">$300</span>
+        </h3>
+        <span class="cs-text">20% Discount</span>
+        </div>
+        <p class="cs-text">
+          Praesent sit amet sagittis tellus, ac aliquam lacus.
+        </p>
+      </div>
 
-                        // Scroll smoothly to the target section with the offset
-                        window.scrollTo({
-                            top: offset,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            }
-        });
-    </script>
 
+    </div>
+  </div>
+</section>
+
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    // Get the button with the class "price-btn"
+    const button = document.querySelector(".price-btn");
+
+    if (button) {
+      // Add a click event listener to the button
+      button.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default button behavior
+        const targetId = button.getAttribute("href"); // Get the target section id
+
+        // Get the target section element
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          // Calculate the offset by subtracting the desired offset value (in pixels)
+          // from the element's offsetTop
+          const offset = targetElement.offsetTop - 50; // Replace 'yourOffsetValue' with the desired offset value
+
+          // Scroll smoothly to the target section with the offset
+          window.scrollTo({
+            top: offset,
+            behavior: "smooth",
+          });
+        }
+      });
+    }
+  });
+</script>
 
 {% endblock %}

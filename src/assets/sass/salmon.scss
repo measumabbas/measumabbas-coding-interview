@@ -2,47 +2,227 @@
 <---      salmon-hero           -->
 <--- -------------------------- -*/
 #salmon-hero .Section_top .hero-image {
-    width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#salmon-overview {
+  .image-group {
+    width: calc(730 / 16 * 1em);
+    height: calc(561 / 16 * 1em);
+
+    .cs-picture1 {
+      width: calc(730 / 16 * 1em);
+      height: calc(561 / 16 * 1em);
+    }
+  }
+}
+
+#salmon-location {
+  .image-group {
+    width: calc(598 / 16 * 1em);
+    height: calc(536 / 16 * 1em);
+
+    .cs-picture1 {
+      width: calc(598 / 16 * 1em);
+      height: calc(536 / 16 * 1em);
+    }
+  }
+}
+
+#salmon-bring {
+  .image-group {
+    width: calc(747 / 16 * 1em);
+    height: calc(690 / 16 * 1em);
+
+    .cs-picture1 {
+      width: calc(747 / 16 * 1em);
+      height: calc(690 / 16 * 1em);
+    }
+  }
+}
+
+#overview {
+  .cs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .text-content {
+      max-width: 516px;
+    }
+  }
+  li::marker {
+    color: var(--primary);
+  }
+}
+
+#our-services {
+  background-color: var(--secondary);
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 27px;
+  position: relative;
+  margin-bottom: 100px;
+  .cs-title {
+    color: #fff;
+  }
+
+  .cs-text {
+    color: #fff;
+    max-width: 661px;
+  }
+  .our-services-content {
+    padding: clamp(1.75rem, 5vw, 4rem) clamp(1rem, 1.5vw, 2rem);
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100%;
-    object-fit: cover;
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+  }
 }
 
-#salmon-overview{
+@media(max-width:1250px){
+    #overview {
+        .cs-container {
+          gap: 1rem;
 
-    .image-group {
-        width: calc(730 / 16 * 1em);
-        height: calc(561 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(730 / 16 * 1em);
-            height: calc(561 / 16 * 1em);
+          .image-group{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+           
+          }
+          .text-content{
+            width: 50%;
+          }
         }
-    }
+      }
+      
 }
 
-
-#salmon-location{
-
-    .image-group {
-        width: calc(598 / 16 * 1em);
-        height: calc(536 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(598 / 16 * 1em);
-            height: calc(536 / 16 * 1em);
+@media(max-width:1100px){
+    #our-services {
+        .cs-text {
+          max-width: 561px;
         }
-    }
+      }
 }
 
-#salmon-bring{
+@media(max-width:1000px){
+    #overview {
+        .cs-container {
+          position: relative;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 500px;
 
-    .image-group {
-        width: calc(747 / 16 * 1em);
-        height: calc(690 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(747 / 16 * 1em);
-            height: calc(690 / 16 * 1em);
+          .image-group{
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            img{
+                width: 100%;
+            }
+          }
+          
+          .text-content{
+              
+              .overview-content{
+                position: absolute;
+                top: 200px;
+                width: 50%;
+                left: 50%;
+              }
+            }
         }
-    }
+      }
+      #our-services {
+        img {
+           display: none;
+          }
+      }
+}
+
+@media(max-width:700px){
+    #overview {
+        .cs-container {
+          margin-bottom: 0px;
+
+          .image-group{
+            img{
+                width: 600px;
+            }
+          }
+          
+          .text-content{
+              width: 100%;
+              h2.cs-title{
+                margin-bottom: 600px;
+              }
+              .overview-content{
+                position: static;
+                width: 100%;
+              }
+            }
+        }
+      }
+}
+@media(max-width:600px){
+    #overview {
+        .cs-container {
+          .image-group{
+            img{
+                width: 500px;
+            }
+          }
+          
+          .text-content{
+              width: 100%;
+              h2.cs-title{
+                margin-bottom: 500px;
+              }
+            }
+        }
+      }
+}
+@media(max-width:500px){
+    #overview {
+        .cs-container {
+          .image-group{
+            img{
+                width: 400px;
+            }
+          }
+          
+          .text-content{
+              h2.cs-title{
+                margin-bottom: 400px;
+              }
+            }
+        }
+      }
+}
+@media(max-width:400px){
+    #overview {
+        .cs-container {
+          .image-group{
+            img{
+                width: 350px;
+            }
+          }
+          
+          .text-content{
+              h2.cs-title{
+                margin-bottom: 350px;
+              }
+            }
+        }
+      }
 }
